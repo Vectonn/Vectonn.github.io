@@ -1,9 +1,26 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-  {{ content }}
+<div class="banner">
+  <div class="banner-text">
+      <h1>BIG HEIST</h1>
+  </div>
+</div>
+
+<div class="formatting">
+  <h1 class="pageTitle">{{ page.title }}</h1>
+  <h2 class="meta">{{ page.date | date_to_string }}</h2>
+
+  <div class ="separation">
+    <div class="post-content">
+      {{ content }}
+    </div>
+    <div class="author-panel">
+      <img src ="/assets/images/icon.png" style="width:125px;height:125px;">
+      <h2> Author </h2>
+      <p>DIS IS GAME DEV WEBSITE 4 JOSKEF PIKLE</p>
+
+    </div>
+  </div>
 </div>

@@ -1,36 +1,48 @@
-body {
-    margin: 60px auto;
-    width: 70%;
-}
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
+    padding-left: 0px;
     list-style: none;
     font-weight: bold;
 }
+
+
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
+
+h2 {
+    font-family:'Inconsolata', 'Arial', 'Sans-Serif';
+    font-weight: bold;
+    font-style: normal;
+}
+
 a {
     text-decoration: none;
-    color: #999;
+    color: rgb(88, 10, 62);
 }
-a:hover {
-    text-decoration: underline;
+
+a:not(.left):hover
+{
+    color: rgb(133, 14, 117);
 }
+
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+
+
 p {
-    font-size: 1.5em;
+    font-size: 1em;
+    font-family:'Inconsolata', 'Arial', 'Sans-Serif';
     line-height: 1.4em;
     color: #333;
 }
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
+    padding-left: 10%;
 }
 
 ul.posts { 
@@ -40,4 +52,78 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+.top-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.left {
+    grid-column: 1;
+    padding-left: 20%;
+}
+
+.right {
+    grid-column: 2;
+    text-align: right;
+    padding-right: 20%;
+
+}
+
+.formatting {
+    padding-left: 30%;
+}
+
+.separation
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.post-content
+{
+    grid-column: 1;
+}
+
+.author-panel
+{
+    padding-left: 20%;
+
+    grid-column: 2;
+
+}
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    }
+
+.banner 
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/front-page.png");
+    height: 50vh;
+    width: 100vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.banner h1 {
+    font-size: 5em;
+
+    margin-top: 0;
+    margin-bottom: 0.5em;
 }
