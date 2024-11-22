@@ -5,7 +5,6 @@ nav ul, footer ul {
     font-weight: bold;
 }
 
-
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
@@ -19,12 +18,12 @@ h2 {
 
 a {
     text-decoration: none;
-    color: rgb(88, 10, 62);
+    color: #f09329;
 }
 
 a:not(.left):hover
 {
-    color: rgb(133, 14, 117);
+    color: #2986F0;
 }
 
 h1 {
@@ -37,10 +36,13 @@ p {
     font-size: 1em;
     font-family:'Inconsolata', 'Arial', 'Sans-Serif';
     line-height: 1.4em;
-    color: #333;
+    color: rgb(255, 251, 244);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 footer {
-    border-top: 1px solid #d5d5d5;
+    border-top: 1px solid #4c4c4c;
     font-size: .8em;
     padding-left: 10%;
 }
@@ -58,14 +60,11 @@ ul.posts li {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-
-    /* background-color: rgb(233, 166, 85); */
-
 }
 
 .left {
     grid-column: 1;
-    padding-left: 20%;
+    padding-left: 40%;
 }
 
 .right {
@@ -95,7 +94,7 @@ body, html {
 
 .banner 
 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/sticky\ fingers.PNG");
+    background-color: 4c4c4c;
     height: 50vh;
     width: 100vw;
     
@@ -103,7 +102,6 @@ body, html {
     justify-content: center;
     align-items: center;
 
-    color: white;
     text-align: center;
 
     background-size: cover;
@@ -123,13 +121,12 @@ body, html {
 {
     width: 600px;
     height: 300px;
-
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     row-gap: 100px;
     column-gap: 100px;
     transform: scale(0.9);
@@ -148,4 +145,121 @@ body, html {
     transition: transform 0.1s;
     pointer-events: auto;
     animation-play-state: running;
+}
+
+
+body {
+    background-color: #1f1f1f;
+    color: rgb(255, 251, 244);
+}
+
+
+/* testing */
+
+
+.project-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible columns */
+    grid-auto-rows: auto; /* Rows grow to fit content */
+    gap: 10px;
+    margin: 10px 0;
+
+    width: calc(400px * 3 + 40px);
+    
+}
+
+.grid-item {
+    display: flex;
+    border: 1px solid #383838;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: #1d1d1d;
+    transition: 0.3s ease; 
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+    box-sizing: border-box;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item:hover {
+    border-color: #f09329;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-item.wide {
+    grid-column: span 5;
+}
+
+.grid-item.tall {
+    grid-column: 1;
+    grid-row: span 20;
+}
+
+.grid-item.long {
+    grid-column: span 2;
+    grid-row: span 40;
+}
+
+.grid-item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 3;   
+}
+
+.grid-item:nth-child(3) {
+    grid-column: span 3; 
+}
+
+.grid-text {
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+
+}
+
+.homepage {
+    align-content: center;
+    
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.game-display {
+    display: flex; /* Flexbox makes centering easy */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0; /* Remove default margin */
+}
+
+
+.game-icon:hover {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+    pointer-events: auto;
+    animation-play-state: running;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    transform: scale(1);
+}
+
+.scale-item {
+    max-width: 10px;
+    max-height: 10px;
+    row-gap: 100px;
+    column-gap: 100px;
+    width: 11px;
+    height: 11px;
 }
